@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B1B59C023EECE620035B149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B59BF23EECE620035B149 /* AppDelegate.swift */; };
-		9B1B59C223EECE620035B149 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B59C123EECE620035B149 /* SceneDelegate.swift */; };
 		9B1B59C423EECE620035B149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B59C323EECE620035B149 /* ViewController.swift */; };
 		9B1B59C723EECE620035B149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B59C523EECE620035B149 /* Main.storyboard */; };
 		9B1B59C923EECE670035B149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B59C823EECE670035B149 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		9B1B59BC23EECE620035B149 /* HW2.4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1B59BF23EECE620035B149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B1B59C123EECE620035B149 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9B1B59C323EECE620035B149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B1B59C623EECE620035B149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B1B59C823EECE670035B149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +54,30 @@
 		9B1B59BE23EECE620035B149 /* HW2.4 */ = {
 			isa = PBXGroup;
 			children = (
+				9B1B59D423EECF030035B149 /* ViewControllers */,
+				9B1B59D323EECEEA0035B149 /* Storyboards */,
 				9B1B59BF23EECE620035B149 /* AppDelegate.swift */,
-				9B1B59C123EECE620035B149 /* SceneDelegate.swift */,
-				9B1B59C323EECE620035B149 /* ViewController.swift */,
-				9B1B59C523EECE620035B149 /* Main.storyboard */,
 				9B1B59C823EECE670035B149 /* Assets.xcassets */,
-				9B1B59CA23EECE670035B149 /* LaunchScreen.storyboard */,
 				9B1B59CD23EECE670035B149 /* Info.plist */,
 			);
 			path = HW2.4;
+			sourceTree = "<group>";
+		};
+		9B1B59D323EECEEA0035B149 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9B1B59C523EECE620035B149 /* Main.storyboard */,
+				9B1B59CA23EECE670035B149 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9B1B59D423EECF030035B149 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B1B59C323EECE620035B149 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +153,6 @@
 			files = (
 				9B1B59C423EECE620035B149 /* ViewController.swift in Sources */,
 				9B1B59C023EECE620035B149 /* AppDelegate.swift in Sources */,
-				9B1B59C223EECE620035B149 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HW2.4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,7 +306,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.smartdragon.HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HW2.4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.smartdragon.HW2-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
