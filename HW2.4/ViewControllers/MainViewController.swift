@@ -10,11 +10,26 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    // MARK: - Public Properties
+    
+    public var currentUser: User!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        userNameLabel.text = currentUser.name
     }
 
+    // MARK: - IBActions
+    
+    @IBAction func logOutAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }

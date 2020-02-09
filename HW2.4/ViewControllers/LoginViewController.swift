@@ -19,12 +19,21 @@ final class LoginViewController: UIViewController {
     // MARK: - Private Methods
     
     private let segueToMain = "ToMain"
+    private let currentUser = User.getUser()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueToMain {
+            let tabBarController = segue.destination as! UITabBarController
+            let destinationController = tabBarController.viewControllers?.first as! MainViewController
+            destinationController.currentUser = currentUser
+        }
     }
 
     // MARK: - IBActions
@@ -38,11 +47,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func getUserNameAction() {
-        showAlert(title: "User Name", message: User.getUser().name)
+        showAlert(title: "User Name", message: currentUser.name)
     }
     
     @IBAction func getUserPasswordAction(_ sender: Any) {
-        showAlert(title: "User PAssword", message: User.getUser().password)
+        showAlert(title: "User PAssword", message: currentUser.password)
     }
     
     // MARK: - Private Methods
@@ -56,9 +65,10 @@ final class LoginViewController: UIViewController {
     }
     
     private func logIn() {
-        let user = User.getUser()
         if let userName = userNameTextField.text, let userPassword = userPasswordTextField.text {
-            if user.name == userName && user.password == userPassword {
+            if currentUser.name == userName && currentUser.password == userPassword {
+                userNameTextField.text = nil
+                userPasswordTextField.text = nil
                 performSegue(withIdentifier: segueToMain, sender: self)
             } else {
                 showAlert(title: "Ошибка", message: "Сочетание логина и пароля неверны, попробуйте еще раз.")

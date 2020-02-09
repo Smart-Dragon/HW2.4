@@ -100,10 +100,39 @@
                     <view key="view" contentMode="scaleToFill" id="SSQ-15-IXE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-9x-tz8">
+                                <rect key="frame" x="20" y="240" width="335" height="118"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-xM-6Tr">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXM-bG-Bmg">
+                                        <rect key="frame" x="0.0" y="82" width="335" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="logOutAction:" destination="Nvr-pB-dBJ" eventType="touchUpInside" id="PTS-1v-EYH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bTJ-9x-tz8" firstAttribute="centerY" secondItem="M2x-gG-qaY" secondAttribute="centerY" id="5Gl-X2-0fS"/>
+                            <constraint firstItem="bTJ-9x-tz8" firstAttribute="leading" secondItem="M2x-gG-qaY" secondAttribute="leading" constant="20" id="Eq6-u2-ILJ"/>
+                            <constraint firstItem="M2x-gG-qaY" firstAttribute="trailing" secondItem="bTJ-9x-tz8" secondAttribute="trailing" constant="20" id="vNE-nP-jv7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M2x-gG-qaY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="Gm3-B4-PY1"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="CL2-xM-6Tr" id="IuQ-JP-nqY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afv-NA-HVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
