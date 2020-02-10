@@ -89,7 +89,7 @@
         <!--Карточка-->
         <scene sceneID="kU0-sC-0qd">
             <objects>
-                <viewController id="88b-6M-eK5" sceneMemberID="viewController">
+                <viewController id="88b-6M-eK5" customClass="CardViewController" customModule="HW2_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjV-Yc-CUV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z0x-na-lwM">
-                                <rect key="frame" x="20" y="223.5" width="335" height="233.5"/>
+                                <rect key="frame" x="20" y="223.5" width="335" height="245.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9d0-0W-xJp">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="21.5"/>
@@ -162,24 +162,26 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zkh-VN-pcX">
-                                        <rect key="frame" x="0.0" y="114.5" width="335" height="24"/>
+                                        <rect key="frame" x="0.0" y="114.5" width="335" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сайт:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4b-SX-9mY">
-                                                <rect key="frame" x="0.0" y="0.0" width="165" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="masloboev.ru" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-zO-XRl">
-                                                <rect key="frame" x="170" y="0.0" width="165" height="24"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcw-oY-cbv">
+                                                <rect key="frame" x="170" y="0.0" width="165" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="masloboev.ru"/>
+                                                <connections>
+                                                    <action selector="goToSite" destination="88b-6M-eK5" eventType="touchUpInside" id="lrc-oU-7mC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zd9-m3-laf">
-                                        <rect key="frame" x="0.0" y="153.5" width="335" height="24"/>
+                                        <rect key="frame" x="0.0" y="165.5" width="335" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Деятельность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-Hp-eGt">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="24"/>
@@ -196,7 +198,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jTF-cF-h5X">
-                                        <rect key="frame" x="0.0" y="192.5" width="335" height="41"/>
+                                        <rect key="frame" x="0.0" y="204.5" width="335" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Увлечение:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpB-A9-aKC">
                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="20.5"/>
