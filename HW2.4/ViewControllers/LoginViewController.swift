@@ -23,11 +23,6 @@ final class LoginViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueToMain {
             let tabBarController = segue.destination as! UITabBarController
@@ -48,10 +43,12 @@ final class LoginViewController: UIViewController {
     
     @IBAction func getUserNameAction() {
         showAlert(title: "User Name", message: currentUser.name)
+        userNameTextField.text = currentUser.name
     }
     
     @IBAction func getUserPasswordAction(_ sender: Any) {
-        showAlert(title: "User PAssword", message: currentUser.password)
+        showAlert(title: "User Password", message: currentUser.password)
+        userPasswordTextField.text = currentUser.password
     }
     
     // MARK: - Private Methods
@@ -71,7 +68,7 @@ final class LoginViewController: UIViewController {
                 userPasswordTextField.text = nil
                 performSegue(withIdentifier: segueToMain, sender: self)
             } else {
-                showAlert(title: "Ошибка", message: "Сочетание логина и пароля неверны, попробуйте еще раз.")
+                showAlert(title: "Ошибка", message: "Сочетание логина и пароля неверны, попробуйте еще раз")
             }
         }
     }
